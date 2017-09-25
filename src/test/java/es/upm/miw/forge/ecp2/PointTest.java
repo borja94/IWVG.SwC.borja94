@@ -27,6 +27,13 @@ public class PointTest {
         assertEquals(0, pt.getX());
         assertEquals(0, pt.getY());
     }
+    
+    @Test
+    public void testPuntoOneValue() {
+        pt = new Point(3);
+        assertEquals(3, pt.getX());
+        assertEquals(3, pt.getY());
+    }
 
     @Test
     public void testModulo() {
