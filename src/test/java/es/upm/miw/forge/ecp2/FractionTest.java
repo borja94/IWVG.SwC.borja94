@@ -36,5 +36,9 @@ public class FractionTest {
 
     }
     
+    @Test
+    public void testIsPropia() {
+        assertEquals(true, fraction.isPropia());
+    }
 
 }
