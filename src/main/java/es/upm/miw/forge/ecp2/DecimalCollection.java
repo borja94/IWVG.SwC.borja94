@@ -51,7 +51,7 @@ public class DecimalCollection {
         if (this.collection.isEmpty()) {
             throw new ArithmeticException("Empty collection");
         }
-        double min = Double.NEGATIVE_INFINITY;
+        double min = Double.POSITIVE_INFINITY;
         for (double item : this.collection) {
             if (item < min) {
                 min = item;
