@@ -49,5 +49,13 @@ public class FractionTest {
         assertEquals(2, fractionResult.getNumerator());
         assertEquals(6, fractionResult.getDenominator());
     }
+    
+    @Test
+    public void testSumFraction() {
+    		Fraction b = new Fraction(1,3);
+    		Fraction result = fraction.sum(b);
+    		assertEquals(5, result.getNumerator());
+        assertEquals(6, result.getDenominator());
+    }
 
 }

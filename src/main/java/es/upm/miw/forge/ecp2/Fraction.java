@@ -64,6 +64,25 @@ public class Fraction {
     		return this.getNumerator() < this.getDenominator();
     	}
     
+    public Fraction sum(Fraction fraction)
+    {
+        Fraction answer;
+
+        if(denominator == fraction.getDenominator())
+        {
+            answer = new Fraction(fraction.getNumerator() + numerator, denominator);
+            }
+        else
+        {
+          int den = denominator * fraction.getDenominator();
+          int num = numerator * fraction.getDenominator();
+          num += fraction.getNumerator() * denominator;
+          answer = new Fraction(num, den);
+
+        }
+     return answer;
+    }
+    
     public Fraction multiply(Fraction fr) {
         Fraction rst = new Fraction(0,0);
         rst.numerator = numerator * fr.numerator;
