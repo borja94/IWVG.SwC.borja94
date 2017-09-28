@@ -64,4 +64,10 @@ public class Fraction {
     		return this.getNumerator() < this.getDenominator();
     	}
     
+    public Fraction multiply(Fraction fr) {
+        Fraction rst = new Fraction(0,0);
+        rst.numerator = numerator * fr.numerator;
+        rst.denominator = denominator * fr.denominator;
+        return rst;
+    }
 }
