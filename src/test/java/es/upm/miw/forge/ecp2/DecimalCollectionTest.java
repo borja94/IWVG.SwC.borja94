@@ -42,17 +42,30 @@ public class DecimalCollectionTest {
 	public void testSumArithmeticExceptionIfEmpty() {
 		exception.expect(ArithmeticException.class);
 		new DecimalCollection().sum();
+	}     
+	
+	@Test
+    public void testHigher() {
+        assertEquals(3.0, this.decimalCollection.higher(), 10e-5);
+    }
+
+    @Test
+    public void testHigherArithmeticExceptionIfEmpty() {
+        exception.expect(ArithmeticException.class);
+        new DecimalCollection().higher();
+    }
+	
+	@Test
+	public void testMin() {
+		assertEquals(-1.0, this.decimalCollection.min(), 10e-5);
 	}
 
 	@Test
-	public void testHigher() {
-		assertEquals(3.0, this.decimalCollection.higher(), 10e-5);
-	}
-
-	@Test
-	public void testHigherArithmeticExceptionIfEmpty() {
+	public void testMinArithmeticExceptionIfEmpty() {
 		exception.expect(ArithmeticException.class);
-		new DecimalCollection().higher();
+		new DecimalCollection().min();
 	}
+	
+
 
 }
