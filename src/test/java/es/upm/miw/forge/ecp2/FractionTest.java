@@ -43,10 +43,11 @@ public class FractionTest {
     
     @Test
     public void testMultiply() {
-        Fraction fractionB = new Fraction(2,6);
-        fraction.multiply(fractionB);
-        assertEquals(1, fraction.getNumerator());
-        assertEquals(2, fraction.getDenominator());
+        Fraction fractionB = new Fraction(2,3);
+        Fraction fractionResult = new Fraction(0,0);
+        fractionResult = fraction.multiply(fractionB);
+        assertEquals(2, fractionResult.getNumerator());
+        assertEquals(6, fractionResult.getDenominator());
     }
 
 }
